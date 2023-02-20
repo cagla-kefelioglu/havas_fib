@@ -64,37 +64,28 @@ class TwoDialogPopat extends StatelessWidget {
                             left: 8.0, right: 8.0, bottom: 8.0),
                         child: Column(
                           children: [
-                            Container(
-                              height: height * 0.4,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assets/images/img2.jpeg"),
-                                    fit: BoxFit.contain,
-                                  )),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: diziTwo!
-                                        .map((index) => Text(
-                                              diziTwo![index].toString(),
-                                              style: TextStyle(
-                                                  fontFamily: 'PoppinsBold',
-                                                  fontWeight: FontWeight.w800),
-                                            ))
-                                        .toList(),
+                                  Expanded(
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: diziTwo!
+                                          .map((index) => Text(
+                                                diziTwo![index].toString(),
+                                                style: TextStyle(
+                                                    fontFamily: 'PoppinsBold',
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                              ))
+                                          .toList(),
+                                    ),
                                   ),
                                 ],
                               ),
